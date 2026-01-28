@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #272b2a 100%);
+        }
+        form {
+            border: 3px solid #7f6565;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #000000;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        button:hover {
+            opacity: 0.8;
+        }
+        
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+        
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+        
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 400px;
+            padding: 16px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        h3 {
+            color: #555;
+        }
+        
+        select {
+            padding: 12px 20px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        input:focus, select:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+        
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Sign up your account</h1>
+        <form action="action_page.php" method="post">
+            <div class="container">
+                <br><label for user="Email"><b>Email`</b></label><br>
+                <input type="text" placeholder="Email" name="uname" required>
+                <br>
+                <br><label for="psw"><b>Password`</b></label><br>
+                <input type="password" placeholder="Password" name="uname" required>
+                <p style="font-size: 14px; color: #666; text-align: left; margin: 5px 0;">Password should be at least 15 characters OR at least 8 characters including a number and lowercase letter.</p>
+
+                <label for="uname"><b>Username`</b></label><br>
+                <input type="text" placeholder="Username" name="uname" required>
+                <p style="font-size: 14px; color: #666; text-align: left; margin: 5px 0;">Username may only contain alphanumeric characters or single hyphens,and cannot begin and end with a hyphen.</p>
+                <br><label for="uname"><b>Your Country/Region</b></label><br>
+                <select id="Your Country/Region" name="Country/Region">
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Brunei">Brunei</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="China">China</option>
+                    <option value="Japan">Japan</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="North Korea">North Korea</option>
+                    <option value="India">India</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="United States">United States</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Australia">Australia</option>
+                    <option value="New Zealand">New Zealand</option>
+                </select>
+                <p style="font-size: 14px; color: #666; text-align: left; margin: 5px 0;">For compliance reasons, we're required to collect country information to send you occasional updates and announcements.</p>
+                <br><label for user="Email"><b>Email preferences</b></label><br>
+                <label style="display: flex; align-items: center; text-align: left;">
+                    <input type="checkbox" name="remember" style="width: auto; margin-right: 8px;">
+                    <span>Receive occasional product updates and announcements</span>
+                </label>
+                <br><button type="submit">Submit</button>
+                <br>
+                <p style="font-size: 14px; color: #666; text-align: center; margin-top: 10px;">
+                    Already have an account? <a href="login.html" style="color: #667eea; text-decoration: none;">Login here</a>
+                </p>
+              
+            </div>
+
+        </form>
+
+    </div>
+</body>
+</html>

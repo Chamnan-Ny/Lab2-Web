@@ -18,13 +18,17 @@
             border: 3px solid #7f6565;
         }
 
-        input[type=text], input[type=password] {
+        input[type=text], input[type=password], input[type=email] {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
             border: 1px solid #000000;
             box-sizing: border-box;
+        }
+        
+        input:invalid {
+            border-color: #ff0000;
         }
         
         button {
@@ -108,16 +112,18 @@
         <form action="action_page.php" method="post">
             <div class="container">
                 <br><label for user="Email"><b>Email`</b></label><br>
-                <input type="text" placeholder="Email" name="uname" required>
-                <br>
-                <br><label for="psw"><b>Password`</b></label><br>
-                <input type="password" placeholder="Password" name="uname" required>
+                <input type="email" placeholder="Email" name="uname" required title="Please enter a valid email address with @">
+                <br><label for="psw"><b>Password`</b></label>
+                <input type="password" placeholder="Password" name="psw" required 
+                       pattern="(?=.*\d)(?=.*[a-z]).{8,}|.{15,}" 
+                       title="Password should be at least 15 characters OR at least 8 characters including a number and lowercase letter.">
                 <p style="font-size: 14px; color: #666; text-align: left; margin: 5px 0;">Password should be at least 15 characters OR at least 8 characters including a number and lowercase letter.</p>
-
                 <label for="uname"><b>Username`</b></label><br>
-                <input type="text" placeholder="Username" name="uname" required>
+                <input type="text" placeholder="Username" name="uname" required 
+                       pattern="[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*" 
+                       title="Username may only contain alphanumeric characters or single hyphens, and cannot begin and end with a hyphen.">
                 <p style="font-size: 14px; color: #666; text-align: left; margin: 5px 0;">Username may only contain alphanumeric characters or single hyphens,and cannot begin and end with a hyphen.</p>
-                <br><label for="uname"><b>Your Country/Region</b></label><br>
+                <label for="uname"><b>Your Country/Region</b></label><br>
                 <select id="Your Country/Region" name="Country/Region">
                     <option value="Cambodia">Cambodia</option>
                     <option value="Vietnam">Vietnam</option>
